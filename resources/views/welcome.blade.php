@@ -530,6 +530,235 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* Add mobile menu styles */
+        .mobile-menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            cursor: pointer;
+            z-index: 1001;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-menu-toggle:hover {
+            color: var(--accent-color);
+        }
+
+        /* Enhanced Responsive Design */
+        @media (max-width: 1200px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+
+            .gallery {
+                padding: 8rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .about {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+                padding: 8rem 1.5rem;
+            }
+
+            .testimonial-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 3rem;
+            }
+
+            .contact-form {
+                padding: 3rem 2rem;
+                margin: 0 1rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                height: 100vh;
+                width: 80%;
+                max-width: 300px;
+                background: rgba(255, 255, 255, 0.98);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2.5rem;
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                box-shadow: -5px 0 25px rgba(0,0,0,0.1);
+                padding: 2rem;
+                z-index: 1000;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links a {
+                font-size: 1.1rem;
+                opacity: 0.9;
+            }
+
+            .nav-links a:hover {
+                opacity: 1;
+            }
+
+            .header {
+                padding: 1rem;
+            }
+
+            .header.scrolled {
+                padding: 0.8rem;
+            }
+
+            .logo img {
+                height: 50px;
+            }
+
+            .header.scrolled .logo img {
+                height: 40px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .gallery-item:nth-child(3n-1) {
+                margin-top: 0;
+            }
+
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .testimonial-card {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .slide-content {
+                width: 90%;
+            }
+
+            .slide-content h1 {
+                font-size: 2.5rem;
+                line-height: 1.2;
+            }
+
+            .slide-content p {
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            .section-subtitle {
+                font-size: 1rem;
+            }
+
+            .about-content h2 {
+                font-size: 2rem;
+            }
+
+            .about-image::after {
+                top: 1rem;
+                left: 1rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+                text-align: center;
+            }
+
+            .social-icons {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-form {
+                padding: 2rem 1.5rem;
+                margin: 0 1rem;
+            }
+
+            .gallery {
+                padding: 6rem 1rem;
+            }
+
+            .about {
+                padding: 6rem 1rem;
+            }
+
+            .testimonials {
+                padding: 6rem 1rem;
+            }
+
+            .footer {
+                padding: 4rem 1rem 2rem;
+            }
+
+            .slide-content h1 {
+                font-size: 2rem;
+            }
+
+            .btn-submit {
+                width: 100%;
+                padding: 1rem;
+            }
+
+            .contact-info-item {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .contact-info-item i {
+                font-size: 1.2rem;
+                width: 35px;
+                height: 35px;
+            }
+        }
+
+        /* Add smooth scrolling for better mobile experience */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Prevent body scroll when mobile menu is open */
+        body.menu-open {
+            overflow: hidden;
+        }
             </style>
     </head>
 <body>
@@ -539,14 +768,17 @@
             <a href="#" class="logo">
                 <img src="{{ asset('images/artisna-logo.png') }}" alt="Artisna Logo">
             </a>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
             <div class="nav-links">
                 <a href="#home">Home</a>
                 <a href="#gallery">Gallery</a>
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
             </div>
-                </nav>
-        </header>
+        </nav>
+    </header>
 
     <!-- Hero Slider -->
     <section id="home" class="hero-slider swiper">
@@ -771,6 +1003,32 @@
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const navLinksItems = document.querySelectorAll('.nav-links a');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        });
+
+        // Close menu when clicking nav links
+        navLinksItems.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+                navLinks.classList.remove('active');
+                document.body.classList.remove('menu-open');
             }
         });
     </script>
