@@ -862,19 +862,19 @@
             <h2 class="section-title" data-aos="fade-up">What Collectors Say</h2>
             <div class="testimonial-grid">
                 <div class="testimonial-card" data-aos="fade-up">
-                    <img src="https://i.pravatar.cc/100?img=1" alt="Sarah Johnson">
+                    <img src="{{ asset('images/testimonial/krupali.png') }}" alt="Krupali Gangani">
                     <p class="testimonial-text">"Absolutely stunning pieces that bring life to any room. The attention to detail is remarkable."</p>
-                    <h4 class="testimonial-author">Sarah Johnson</h4>
+                    <h4 class="testimonial-author">Krupali Gangani</h4>
                 </div>
                 <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://i.pravatar.cc/100?img=3" alt="Michael Chen">
+                    <img src="{{ asset('images/testimonial/sahil.png') }}" alt="Sahil Darji">
                     <p class="testimonial-text">"Each artwork tells a unique story. I'm proud to have these pieces in my collection."</p>
-                    <h4 class="testimonial-author">Michael Chen</h4>
+                    <h4 class="testimonial-author">Sahil Darji</h4>
                 </div>
                 <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://i.pravatar.cc/100?img=5" alt="Emma Thompson">
+                    <img src="{{ asset('images/testimonial/ruchit.png') }}" alt="Ruchit Patel">
                     <p class="testimonial-text">"The artist's vision and execution are simply breathtaking. True masterpieces."</p>
-                    <h4 class="testimonial-author">Emma Thompson</h4>
+                    <h4 class="testimonial-author">Ruchit Patel</h4>
                 </div>
             </div>
         </div>
@@ -887,9 +887,11 @@
         </div>
         <div class="about-content" data-aos="fade-left">
             <p class="section-subtitle">About the Artist</p>
-            <h2>Crafting Beauty Through Art</h2>
-            <p>Art is my way of expressing emotions, capturing beauty, and bringing imagination to life.</p>
+            <h2>Art that speaks to your soul!</h2>
+            <p>Art is my way of expressing emotions, capturing beauty, and bringing imagination to life.</p> 
             <p>I specialize in abstract, natural, and artistic paintings, each crafted with depth and creativity.</p>
+            <p>I believe art has no limits—it’s a journey of expression and imagination.</p>
+            <p>Step into my world, where every brushstroke tells a story waiting to be felt.</p>
         </div>
     </section>
 
