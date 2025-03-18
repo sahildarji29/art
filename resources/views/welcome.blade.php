@@ -3,7 +3,7 @@
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artisanaa</title>
+    <title>Artisnaa</title>
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/favicon/fav.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicon/fav.png') }}">
@@ -33,6 +33,12 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html, body {
+            overflow-x: hidden;
+            position: relative;
+            width: 100%;
         }
 
         body {
@@ -72,6 +78,8 @@
             -webkit-backdrop-filter: blur(10px);
             z-index: 1000;
             transition: var(--transition);
+            left: 0;
+            top: 0;
         }
 
         .header.scrolled {
@@ -149,6 +157,8 @@
             height: 100vh;
             width: 100%;
             overflow: hidden;
+            position: relative;
+            z-index: 1;
         }
 
         .swiper-slide {
@@ -220,6 +230,7 @@
             aspect-ratio: 1;
             box-shadow: var(--box-shadow);
             transition: var(--transition);
+            transform-origin: center;
         }
 
         .gallery-item:nth-child(3n-1) {
@@ -230,12 +241,16 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.6s ease;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .gallery-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
         }
 
         .gallery-overlay {
@@ -244,14 +259,17 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2));
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
             opacity: 0;
             transition: var(--transition);
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 1.2rem;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
         }
 
         .gallery-overlay span {
@@ -259,6 +277,9 @@
             transition: var(--transition);
             font-weight: 500;
             letter-spacing: 1px;
+            padding: 0.5rem 1rem;
+            border: 2px solid rgba(255, 255, 255, 0.6);
+            border-radius: 4px;
         }
 
         .gallery-item:hover .gallery-overlay span {
@@ -739,6 +760,57 @@
         }
 
         @media (max-width: 768px) {
+            .gallery {
+                padding: 6rem 1rem;
+            }
+
+            .testimonials {
+                padding: 6rem 1rem;
+            }
+
+            .about {
+                padding: 6rem 1rem;
+                gap: 3rem;
+            }
+
+            .why-choose {
+                padding: 6rem 1rem;
+            }
+
+            .why-choose-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact {
+                padding: 6rem 1rem;
+            }
+
+            .nav-links a {
+                font-size: 1.2rem;
+                padding: 1rem;
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            }
+
+            .footer {
+                padding: 3rem 1rem 1.5rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .logo img {
+                height: 70px;
+            }
+
+            .slide-content {
+                width: 90%;
+            }
+
             .gallery-grid {
                 grid-template-columns: 1fr;
             }
@@ -748,82 +820,19 @@
             }
 
             .form-grid {
-                grid-template-columns: 1fr;
+                grid-grid-columns: 1fr;
             }
 
             .slide-content h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
 
             .slide-content p {
-                font-size: 1.1rem;
+                font-size: 1rem;
             }
 
             .contact-info {
                 grid-template-columns: 1fr;
-            }
-
-            .logo img {
-                height: 70px;
-            }
-
-            .mobile-menu-toggle {
-                display: block;
-                position: fixed;
-                right: 2rem;
-            }
-
-            .nav-links {
-                display: none;
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100vh;
-                background: rgba(255, 255, 255, 0.98);
-                backdrop-filter: blur(10px);
-                -webkit-backdrop-filter: blur(10px);
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 2rem;
-                z-index: 999;
-                padding-top: 80px;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .nav-links a {
-                font-size: 1.2rem;
-                padding: 1rem 2rem;
-                width: 100%;
-                text-align: center;
-                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            }
-
-            .header.scrolled .mobile-menu-toggle {
-                top: 50%;
-            }
-
-            .why-choose {
-                padding: 6rem 1rem;
-            }
-            
-            .why-choose-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .footer {
-                padding: 3rem 1.5rem 1.5rem;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-                text-align: center;
             }
 
             .footer h4::after {
@@ -875,12 +884,11 @@
             }
 
             .section-title {
-                font-size: 2rem;
-                margin-bottom: 2rem;
+                font-size: 1.8rem;
             }
 
             .section-subtitle {
-                font-size: 0.9rem;
+                font-size: 0.85rem;
             }
 
             .gallery-item {
@@ -901,6 +909,42 @@
         }
 
         @media (max-width: 480px) {
+            .gallery {
+                padding: 5rem 1rem;
+            }
+
+            .testimonials {
+                padding: 5rem 1rem;
+            }
+
+            .about {
+                padding: 5rem 1rem;
+            }
+
+            .why-choose {
+                padding: 5rem 1rem;
+            }
+
+            .contact {
+                padding: 5rem 1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .section-subtitle {
+                font-size: 0.85rem;
+            }
+
+            .slide-content h1 {
+                font-size: 2rem;
+            }
+
+            .slide-content p {
+                font-size: 1rem;
+            }
+
             .contact-form {
                 padding: 1.5rem;
                 margin: 0 0.5rem;
@@ -961,37 +1005,47 @@
             cursor: pointer;
             font-size: 1.5rem;
             color: var(--primary-color);
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
             z-index: 1001;
             padding: 0.5rem;
+            transition: var(--transition);
+            background: none;
+            border: none;
+            outline: none;
         }
 
         @media (max-width: 768px) {
+            .header {
+                padding: 1rem;
+            }
+
+            .nav {
+                padding: 0;
+            }
+
             .mobile-menu-toggle {
                 display: block;
-                position: fixed;
-                right: 2rem;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
             }
 
             .nav-links {
-                display: none;
                 position: fixed;
                 top: 0;
                 left: 0;
-                width: 100%;
+                width: 100vw;
                 height: 100vh;
                 background: rgba(255, 255, 255, 0.98);
                 backdrop-filter: blur(10px);
                 -webkit-backdrop-filter: blur(10px);
+                display: none;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 gap: 2rem;
                 z-index: 999;
-                padding-top: 80px;
+                padding: 80px 1rem;
             }
 
             .nav-links.active {
@@ -1045,6 +1099,124 @@
                 transform: rotate(360deg);
             }
         }
+
+        /* Lightbox Styles */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .lightbox.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90vh;
+            margin: auto;
+        }
+
+        .lightbox-image {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 4px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+            transform: scale(0.9);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .lightbox.active .lightbox-image {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            z-index: 1001;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .lightbox-close:hover {
+            background: rgba(0, 0, 0, 0.6);
+            transform: scale(1.1);
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            z-index: 1001;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .lightbox-nav:hover {
+            background: rgba(0, 0, 0, 0.6);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .lightbox-prev {
+            left: 20px;
+        }
+
+        .lightbox-next {
+            right: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .lightbox-content {
+                max-width: 95%;
+            }
+
+            .lightbox-nav {
+                width: 40px;
+                height: 40px;
+                font-size: 1.5rem;
+            }
+
+            .lightbox-prev {
+                left: 10px;
+            }
+
+            .lightbox-next {
+                right: 10px;
+            }
+        }
             </style>
     </head>
 <body>
@@ -1073,7 +1245,7 @@
                 <div class="slide-overlay"></div>
                 <img src="{{ asset('images/slider/second.png') }}" alt="Art 1">
                 <div class="slide-content">
-                    <h1>Welcome to Artisanaa</h1>
+                    <h1>Welcome to Artisnaa</h1>
                     <p>Discover the beauty of contemporary art</p>
                 </div>
             </div>
@@ -1144,7 +1316,7 @@
                 <div class="gallery-overlay">
                     <span>View Artwork</span>
                 </div>
-            </div>
+        </div>
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
                 <img src="{{ asset('images/gallery/e.png') }}" alt="Gallery Image">
                 <div class="gallery-overlay">
@@ -1187,12 +1359,10 @@
         <div class="about-content" data-aos="fade-left">
             <p class="section-subtitle">About the Artist</p>
             <h2>Art that speaks to your soul!</h2>
-            <p>Art is my way of expressing emotions, capturing beauty, and bringing imagination to life.</p> 
-            <p>Painting is more than a profession—it's a journey of self-expression and connection. Inspired by nature and emotions, I create artwork that resonates, evokes feelings, and enhances spaces.</p>
-            <p>I specialize in abstract, natural, and artistic paintings, each crafted with depth and creativity.</p>
-            <p>Every piece is made with passion, precision, and artistic integrity. My goal is to bring joy to my customers by delivering unique, high-quality paintings that inspire and uplift./p>
-            <p>I believe art has no limits—it's a journey of expression and imagination.</p>
-            <p>Step into my world, where every brushstroke tells a story waiting to be felt.</p>
+            <p>I'm Darshana, a passionate artist who believes that painting is more than just colors on a canvas—it's a journey of self-expression, creativity, and connection. Inspired by nature, emotions, and the endless possibilities of abstract art, I strive to create pieces that resonate deeply and transform spaces.</p> 
+            <p>I specialize in abstract, natural, and artistic paintings, each crafted with depth, emotion, and a unique artistic vision. Every brushstroke reflects my passion, bringing stories to life on canvas.</p>
+            <p>With a commitment to quality and artistic integrity, I ensure that every piece is designed to inspire, uplift, and bring joy. Whether it's a bold statement piece or a subtle expression of beauty, my goal is to create art that truly speaks to you.</p>
+            <p>Art has no boundaries—it's an endless journey of imagination and emotion. Step into my world, where every painting tells a story waiting to be felt.</p>
         </div>
     </section>
 
@@ -1302,6 +1472,22 @@
         </div>
     </footer>
 
+    <!-- Lightbox -->
+    <div class="lightbox">
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-image">
+            <div class="lightbox-close">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="lightbox-nav lightbox-prev">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            <div class="lightbox-nav lightbox-next">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -1363,6 +1549,84 @@
             if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
                 navLinks.classList.remove('active');
                 document.body.classList.remove('menu-open');
+            }
+        });
+
+        // Lightbox functionality
+        const lightbox = document.querySelector('.lightbox');
+        const lightboxImage = document.querySelector('.lightbox-image');
+        const lightboxClose = document.querySelector('.lightbox-close');
+        const lightboxPrev = document.querySelector('.lightbox-prev');
+        const lightboxNext = document.querySelector('.lightbox-next');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        let currentImageIndex = 0;
+
+        // Open lightbox
+        galleryItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                currentImageIndex = index;
+                const imgSrc = item.querySelector('img').src;
+                lightboxImage.src = imgSrc;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close lightbox
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Navigate through images
+        function showImage(index) {
+            if (index >= galleryItems.length) {
+                currentImageIndex = 0;
+            } else if (index < 0) {
+                currentImageIndex = galleryItems.length - 1;
+            } else {
+                currentImageIndex = index;
+            }
+            const imgSrc = galleryItems[currentImageIndex].querySelector('img').src;
+            lightboxImage.style.opacity = '0';
+            setTimeout(() => {
+                lightboxImage.src = imgSrc;
+                lightboxImage.style.opacity = '1';
+            }, 200);
+        }
+
+        lightboxPrev.addEventListener('click', () => {
+            showImage(currentImageIndex - 1);
+        });
+
+        lightboxNext.addEventListener('click', () => {
+            showImage(currentImageIndex + 1);
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            
+            if (e.key === 'Escape') {
+                closeLightbox();
+            } else if (e.key === 'ArrowLeft') {
+                showImage(currentImageIndex - 1);
+            } else if (e.key === 'ArrowRight') {
+                showImage(currentImageIndex + 1);
+            }
+        });
+
+        // Prevent scrolling when lightbox is open
+        lightbox.addEventListener('wheel', (e) => {
+            if (lightbox.classList.contains('active')) {
+                e.preventDefault();
             }
         });
     </script>
