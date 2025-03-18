@@ -44,7 +44,7 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="slide-overlay"></div>
-                <img src="{{ asset('images/slider/second.png') }}" alt="Art 1">
+                <img src="{{ asset('images/slider/a.png') }}" alt="Art 1">
                 <div class="slide-content">
                     <h1>Welcome to Artisnaa</h1>
                     <p>Discover the beauty of contemporary art</p>
@@ -52,7 +52,7 @@
             </div>
             <div class="swiper-slide">
                 <div class="slide-overlay"></div>
-                <img src="{{ asset('images/slider/first.png') }}" alt="Art 2">
+                <img src="{{ asset('images/slider/b.png') }}" alt="Art 2">
                 <div class="slide-content">
                     <h1>Unique Artworks</h1>
                     <p>Each piece tells a story</p>
@@ -60,7 +60,7 @@
             </div>
             <div class="swiper-slide">
                 <div class="slide-overlay"></div>
-                <img src="{{ asset('images/slider/third.png') }}" alt="Art 3">
+                <img src="{{ asset('images/slider/c.png') }}" alt="Art 3">
                 <div class="slide-content">
                     <h1>Experience Art</h1>
                     <p>Let your imagination soar</p>
