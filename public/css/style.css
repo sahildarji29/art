@@ -59,6 +59,8 @@ h1, h2, h3, h4 {
     transition: var(--transition);
     left: 0;
     top: 0;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
 }
 
 .header.scrolled {
@@ -84,6 +86,9 @@ h1, h2, h3, h4 {
     text-decoration: none;
     display: flex;
     align-items: center;
+    z-index: 1001;
+    position: relative;
+    isolation: isolate;
 }
 
 .logo img {
@@ -94,6 +99,9 @@ h1, h2, h3, h4 {
     backface-visibility: hidden;
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
+    mix-blend-mode: normal;
+    isolation: isolate;
+    will-change: transform;
 }
 
 .logo:hover img {
@@ -882,6 +890,8 @@ body.menu-open {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
+        z-index: 1001;
+        isolation: isolate;
     }
 
     .logo img {
@@ -893,6 +903,9 @@ body.menu-open {
         -webkit-transform: translateZ(0);
         filter: none;
         -webkit-filter: none;
+        mix-blend-mode: normal;
+        isolation: isolate;
+        will-change: transform;
     }
 
     .mobile-menu-toggle {
