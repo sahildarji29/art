@@ -9,8 +9,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicon/fav.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/favicon/fav.png') }}">
     {{-- <link rel="manifest" href="{{ asset('images/favicon/site.webmanifest') }}"> --}}
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+        <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Swiper JS -->
@@ -52,7 +52,7 @@
             </div>
             <div class="swiper-slide">
                 <div class="slide-overlay"></div>
-                <img src="{{ asset('images/slider/b.png') }}" alt="Art 2">
+                <img src="{{ asset('images/slider/qq.png') }}" alt="Art 2">
                 <div class="slide-content">
                     <h1>Unique Artworks</h1>
                     <p>Each piece tells a story</p>
@@ -60,7 +60,7 @@
             </div>
             <div class="swiper-slide">
                 <div class="slide-overlay"></div>
-                <img src="{{ asset('images/slider/c.png') }}" alt="Art 3">
+                <img src="{{ asset('images/slider/vv.png') }}" alt="Art 3">
                 <div class="slide-content">
                     <h1>Experience Art</h1>
                     <p>Let your imagination soar</p>
@@ -76,35 +76,90 @@
         <h2 class="section-title" data-aos="fade-up">Featured Works</h2>
         <div class="gallery-grid">
             <div class="gallery-item" data-aos="fade-up">
-                <img src="{{ asset('images/gallery/a.png') }}" alt="Gallery Image">
+                <img src="{{ asset('images/gallery/q.png') }}" alt="Gallery Image">
                 <div class="gallery-overlay">
                     <span>View Artwork</span>
                 </div>
             </div>
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
-                <img src="{{ asset('images/gallery/b.png') }}" alt="Gallery Image">
+                <img src="{{ asset('images/gallery/w.png') }}" alt="Gallery Image">
                 <div class="gallery-overlay">
                     <span>View Artwork</span>
                 </div>
             </div>
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
-                <img src="{{ asset('images/gallery/c.png') }}" alt="Gallery Image">
+                <img src="{{ asset('images/gallery/e.png') }}" alt="Gallery Image">
                 <div class="gallery-overlay">
                     <span>View Artwork</span>
                 </div>
             </div>
             <div class="gallery-item" data-aos="fade-up">
-                <img src="{{ asset('images/gallery/d.png') }}" alt="Gallery Image">
+                <img src="{{ asset('images/gallery/r.png') }}" alt="Gallery Image">
                 <div class="gallery-overlay">
                     <span>View Artwork</span>
                 </div>
             </div>
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
-                <img src="{{ asset('images/gallery/h.png') }}" alt="Gallery Image">
+                <img src="{{ asset('images/gallery/t.png') }}" alt="Gallery Image">
                 <div class="gallery-overlay">
                     <span>View Artwork</span>
                 </div>
             </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                <img src="{{ asset('images/gallery/y.png') }}" alt="Gallery Image">
+                <div class="gallery-overlay">
+                    <span>View Artwork</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+                <img src="{{ asset('images/gallery/u.png') }}" alt="Gallery Image">
+                <div class="gallery-overlay">
+                    <span>View Artwork</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                <img src="{{ asset('images/gallery/i.png') }}" alt="Gallery Image">
+                <div class="gallery-overlay">
+                    <span>View Artwork</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                <img src="{{ asset('images/gallery/o.png') }}" alt="Gallery Image">
+                <div class="gallery-overlay">
+                    <span>View Artwork</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                <img src="{{ asset('images/gallery/p.png') }}" alt="Gallery Image">
+                <div class="gallery-overlay">
+                    <span>View Artwork</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                <img src="{{ asset('images/gallery/a.png') }}" alt="Gallery Image">
+                <div class="gallery-overlay">
+                    <span>View Artwork</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                <img src="{{ asset('images/gallery/s.png') }}" alt="Gallery Image">
+                <div class="gallery-overlay">
+                    <span>View Artwork</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                <img src="{{ asset('images/gallery/d.png') }}" alt="Gallery Image">
+                <div class="gallery-overlay">
+                    <span>View Artwork</span>
+                </div>
+            </div>
+
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
                 <img src="{{ asset('images/gallery/f.png') }}" alt="Gallery Image">
                 <div class="gallery-overlay">
@@ -112,14 +167,15 @@
                 </div>
             </div>
 
-            <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
                 <img src="{{ asset('images/gallery/g.png') }}" alt="Gallery Image">
                 <div class="gallery-overlay">
                     <span>View Artwork</span>
                 </div>
-        </div>
+            </div>
+
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
-                <img src="{{ asset('images/gallery/e.png') }}" alt="Gallery Image">
+                <img src="{{ asset('images/gallery/h.png') }}" alt="Gallery Image">
                 <div class="gallery-overlay">
                     <span>View Artwork</span>
                 </div>
@@ -251,14 +307,14 @@
         <div class="footer-content">
             <div>
                 <div class="footer-logo">
-                    <img src="{{ asset('images/artisna-logo.png') }}" alt="Artisna Logo">
+                    <img src="{{ asset('images/Artisanaa-footer.png') }}" alt="Artisna Logo">
                 </div>
                 <p>Art that speaks to your soul.</p>
                 <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="https://www.facebook.com/share/1BFmj8ojwz/?mibextid=wwXIfr"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/darshana.artisnaa?igsh=MWl6MTlyMTIxM2l3Mw%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a>
+                    {{-- <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a> --}}
                 </div>
             </div>
             <div>
