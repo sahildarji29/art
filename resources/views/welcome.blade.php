@@ -44,20 +44,20 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="slide-overlay"></div>
-                <img src="{{ asset('images/slider/qwerty.png') }}" alt="Art 1">
+                <img src="{{ asset('images/slider/frst.png') }}" alt="Art 1">
                 <div class="slide-content">
                     <h1>Welcome to Artisnaa</h1>
                     <p>Discover the beauty of contemporary art</p>
                 </div>
             </div>
-            <div class="swiper-slide">
+            {{-- <div class="swiper-slide">
                 <div class="slide-overlay"></div>
                 <img src="{{ asset('images/slider/a.png') }}" alt="Art 2">
                 <div class="slide-content">
                     <h1>Unique Artworks</h1>
                     <p>Each piece tells a story</p>
                 </div>
-            </div>
+            </div> --}}
             <div class="swiper-slide">
                 <div class="slide-overlay"></div>
                 <img src="{{ asset('images/slider/vv.png') }}" alt="Art 3">
@@ -76,45 +76,94 @@
         <h2 class="section-title" data-aos="fade-up">Featured Works</h2>
         <div class="gallery-grid">
             <div class="gallery-item" data-aos="fade-up">
-                <img src="{{ asset('images/gallery/q.png') }}" alt="Gallery Image">
+                <img src="{{ asset('images/gallery/a.png') }}" alt="Gallery Image">
                 <div class="gallery-overlay">
                     <span>View Artwork</span>
                 </div>
             </div>
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
-                <img src="{{ asset('images/gallery/w.png') }}" alt="Gallery Image">
+                <img src="{{ asset('images/gallery/b.png') }}" alt="Gallery Image">
                 <div class="gallery-overlay">
                     <span>View Artwork</span>
                 </div>
             </div>
      
             <div class="gallery-item" data-aos="fade-up">
-                <img src="{{ asset('images/gallery/r.png') }}" alt="Gallery Image">
+                <img src="{{ asset('images/gallery/c.png') }}" alt="Gallery Image">
                 <div class="gallery-overlay">
                     <span>View Artwork</span>
                 </div>
             </div>
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
-                <img src="{{ asset('images/gallery/t.png') }}" alt="Gallery Image">
+                <img src="{{ asset('images/gallery/d.png') }}" alt="Gallery Image">
                 <div class="gallery-overlay">
                     <span>View Artwork</span>
                 </div>
             </div>
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
-                <img src="{{ asset('images/gallery/y.png') }}" alt="Gallery Image">
+                <img src="{{ asset('images/gallery/e.png') }}" alt="Gallery Image">
                 <div class="gallery-overlay">
                     <span>View Artwork</span>
                 </div>
             </div>
 
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
-                <img src="{{ asset('images/gallery/u.png') }}" alt="Gallery Image">
+                <img src="{{ asset('images/gallery/f.png') }}" alt="Gallery Image">
                 <div class="gallery-overlay">
                     <span>View Artwork</span>
                 </div>
             </div>
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                <img src="{{ asset('images/gallery/g.png') }}" alt="Gallery Image">
+                <div class="gallery-overlay">
+                    <span>View Artwork</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                <img src="{{ asset('images/gallery/h.png') }}" alt="Gallery Image">
+                <div class="gallery-overlay">
+                    <span>View Artwork</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
                 <img src="{{ asset('images/gallery/i.png') }}" alt="Gallery Image">
+                <div class="gallery-overlay">
+                    <span>View Artwork</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                <img src="{{ asset('images/gallery/j.png') }}" alt="Gallery Image">
+                <div class="gallery-overlay">
+                    <span>View Artwork</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                <img src="{{ asset('images/gallery/k.png') }}" alt="Gallery Image">
+                <div class="gallery-overlay">
+                    <span>View Artwork</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                <img src="{{ asset('images/gallery/l.png') }}" alt="Gallery Image">
+                <div class="gallery-overlay">
+                    <span>View Artwork</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                <img src="{{ asset('images/gallery/m.png') }}" alt="Gallery Image">
+                <div class="gallery-overlay">
+                    <span>View Artwork</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                <img src="{{ asset('images/gallery/n.png') }}" alt="Gallery Image">
                 <div class="gallery-overlay">
                     <span>View Artwork</span>
                 </div>
@@ -135,7 +184,14 @@
             </div>
 
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
-                <img src="{{ asset('images/gallery/a.png') }}" alt="Gallery Image">
+                <img src="{{ asset('images/gallery/q.png') }}" alt="Gallery Image">
+                <div class="gallery-overlay">
+                    <span>View Artwork</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                <img src="{{ asset('images/gallery/r.png') }}" alt="Gallery Image">
                 <div class="gallery-overlay">
                     <span>View Artwork</span>
                 </div>
@@ -149,28 +205,35 @@
             </div>
 
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
-                <img src="{{ asset('images/gallery/d.png') }}" alt="Gallery Image">
+                <img src="{{ asset('images/gallery/t.png') }}" alt="Gallery Image">
                 <div class="gallery-overlay">
                     <span>View Artwork</span>
                 </div>
             </div>
 
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
-                <img src="{{ asset('images/gallery/f.png') }}" alt="Gallery Image">
+                <img src="{{ asset('images/gallery/u.png') }}" alt="Gallery Image">
                 <div class="gallery-overlay">
                     <span>View Artwork</span>
                 </div>
             </div>
 
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
-                <img src="{{ asset('images/gallery/g.png') }}" alt="Gallery Image">
+                <img src="{{ asset('images/gallery/v.png') }}" alt="Gallery Image">
                 <div class="gallery-overlay">
                     <span>View Artwork</span>
                 </div>
             </div>
 
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
-                <img src="{{ asset('images/gallery/h.png') }}" alt="Gallery Image">
+                <img src="{{ asset('images/gallery/w.png') }}" alt="Gallery Image">
+                <div class="gallery-overlay">
+                    <span>View Artwork</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                <img src="{{ asset('images/gallery/x.png') }}" alt="Gallery Image">
                 <div class="gallery-overlay">
                     <span>View Artwork</span>
                 </div>
@@ -185,7 +248,7 @@
             <h2 class="section-title" data-aos="fade-up">What Collectors Say</h2>
             <div class="testimonial-grid">
                 <div class="testimonial-card" data-aos="fade-up">
-                    <img src="{{ asset('images/testimonial/krupali.png') }}" alt="Krupali Gangani">
+                    <img src="{{ asset('images/testimonial/new_krupali.png') }}" alt="Krupali Gangani">
                     <p class="testimonial-text">"Absolutely stunning pieces that bring life to any room. The attention to detail is remarkable."</p>
                     <h4 class="testimonial-author">Krupali Gangani</h4>
                 </div>
@@ -206,7 +269,7 @@
     <!-- About -->
     <section id="about" class="about">
         <div class="about-image" data-aos="fade-right">
-            <img src="{{ asset('images/about_me.png') }}" alt="Artist">
+            <img src="{{ asset('images/about_me_2.png') }}" alt="Artist">
         </div>
         <div class="about-content" data-aos="fade-left">
             <p class="section-subtitle">About the Artist</p>
