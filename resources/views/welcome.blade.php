@@ -87,7 +87,7 @@
                     <span>View Artwork</span>
                 </div>
             </div>
-     
+
             <div class="gallery-item" data-aos="fade-up">
                 <img src="{{ asset('images/gallery/c.png') }}" alt="Gallery Image">
                 <div class="gallery-overlay">
@@ -274,7 +274,7 @@
         <div class="about-content" data-aos="fade-left">
             <p class="section-subtitle">About the Artist</p>
             <h2>Art that speaks to your soul!</h2>
-            <p>I'm Darshana, a passionate artist who believes that painting is more than just colors on a canvas—it's a journey of self-expression, creativity, and connection. Inspired by nature, emotions, and the endless possibilities of abstract art, I strive to create pieces that resonate deeply and transform spaces.</p> 
+            <p>I'm Darshana, a passionate artist who believes that painting is more than just colors on a canvas—it's a journey of self-expression, creativity, and connection. Inspired by nature, emotions, and the endless possibilities of abstract art, I strive to create pieces that resonate deeply and transform spaces.</p>
             <p>I specialize in abstract, natural, and artistic paintings, each crafted with depth, emotion, and a unique artistic vision. Every brushstroke reflects my passion, bringing stories to life on canvas.</p>
             <p>With a commitment to quality and artistic integrity, I ensure that every piece is designed to inspire, uplift, and bring joy. Whether it's a bold statement piece or a subtle expression of beauty, my goal is to create art that truly speaks to you.</p>
             <p>Art has no boundaries—it's an endless journey of imagination and emotion. Step into my world, where every painting tells a story waiting to be felt.</p>
@@ -353,7 +353,7 @@
                     <i class="fas fa-envelope"></i>
                     <div class="info">
                         <h4>Write Us</h4>
-                        <p>darshana.artisnaa@gmail.com</p>
+                        <p>darshana@artisnaa.com</p>
                     </div>
                 </div>
             </div>
@@ -528,7 +528,7 @@
         // Keyboard navigation
         document.addEventListener('keydown', (e) => {
             if (!lightbox.classList.contains('active')) return;
-            
+
             if (e.key === 'Escape') {
                 closeLightbox();
             } else if (e.key === 'ArrowLeft') {
